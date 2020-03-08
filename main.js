@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 // hack required for getting magenta js to work for node
 global.performance = Date;
-global.fetch = require('  ');
+global.fetch = require('node-fetch');
 
 var reverseMidiMapping = new Map([
   [36, 'x'],
