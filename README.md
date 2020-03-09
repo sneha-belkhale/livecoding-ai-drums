@@ -24,7 +24,7 @@ else :
 If you would like to just print the players and execute them yourself, simply use the following snippet : 
 ```python
 import requests
-response = requests.post('https://codercat.tk/livecoding/foxdot/ai-drums', data={'length':'4','randomness':'2', 'pattern':'x x .  rr'})
+response = requests.post('https://codercat.tk/livecoding/foxdot/ai-drums', data={'length':'4', 'randomness':'2', 'pattern':'x x .  rr'})
 print(response.text)
 ```
 
