@@ -2,6 +2,7 @@
 Generate livecoding drum patterns with [magenta.js](https://magenta.tensorflow.org/)
 
 This project is an API for using the magenta machine learning tool to generate FoxDot drum patterns. After providing a seed pattern, the neural network will dream up a continuation to your pattern. The API output format is ready to go in FoxDot format, and can be executed automatically or copied, pasted, and edited.
+
 ![alt text](https://user-images.githubusercontent.com/17795014/76175028-cb62d880-6167-11ea-97b9-adf569f3aa9c.gif)
 
 Check out the project on the interwebs @ [Codercat](https://codercat.tk/neurojam.html)
