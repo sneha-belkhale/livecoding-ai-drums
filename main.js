@@ -178,7 +178,7 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-app.post('/sprucey', async (req, res) => {
+app.post('/foxdot/ai-drums', async (req, res) => {
   try {
     const drumPattern = await getBotDrums(req.body);
     res.status(200);
