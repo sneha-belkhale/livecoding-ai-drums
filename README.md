@@ -58,7 +58,7 @@ Body:
 }
 ```
 
-### Terminal
+### Usage in Terminal
 You know what to do. 
 
 ```curl -d '{"pattern":"x x .  rr", "length": "30", "randomness", "2"}' -H "Content-Type: application/json" -X POST https://codercat.tk/livecoding/foxdot/ai-drums```
