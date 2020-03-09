@@ -5,7 +5,19 @@ This project is an API for using the magenta machine learning tool to generate F
 
 Check out the project on the interwebs @ [Codercat](https://codercat.tk/neurojam.html)
 
-## Parameters: 
+## API
+```
+POST https://codercat.tk/livecoding/foxdot/ai-drums
+
+Body:
+{
+    'pattern': 'x x .  rr',
+    'length': '4',
+    'randomness': '2'
+}
+```
+
+## Parameters
 
 **Pattern** : The seed pattern. A concatenation of foxdot patterns of the same length, separated by a period (.) . 
 
@@ -21,15 +33,17 @@ results in the seed pattern of `"x x .  rr"`
 **Randomness** : Used to control the randomness of predictions, where higher values increase randomness. Range(1-10)
 
 
-## Usage:
+## Usage
 
 ### FoxDot IDE, Atom Extension, or Python Shell
 
-Copy and paste your parameters into the `data` dictionary, and execute. The following snippet will automatically execute the new FoxDot players. 
+Copy and paste your parameters into the `params` dictionary, and execute. The following snippet will automatically execute the new FoxDot players. 
 
 ```python
 import requests
-response = requests.post('https://codercat.tk/livecoding/foxdot/ai-drums', data={'pattern':'x x .  rr', 'length':'4','randomness':'2'})
+
+params = {'pattern':'x x .  rr', 'length':'4','randomness':'2'}
+response = requests.post('https://codercat.tk/livecoding/foxdot/ai-drums', data=params)
 if response.status_code == 200:
     for line in response.text.splitlines():
         execute(line)
@@ -50,7 +64,7 @@ You know what to do.
 ```curl -d '{"pattern":"x x .  rr", "length": "30", "randomness", "2"}' -H "Content-Type: application/json" -X POST https://codercat.tk/livecoding/foxdot/ai-drums```
 
 
-## Refs:
+## Refs
 
 [Neural Drum Machine](https://codepen.io/teropa/details/JLjXGK)
 
